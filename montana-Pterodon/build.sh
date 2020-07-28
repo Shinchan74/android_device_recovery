@@ -11,7 +11,7 @@ SYNC_DIFF=$((SYNC_END - SYNC_START))
 telegram -M "Pterodon - Moto G5S: Device Tree Sync (Dependencies) completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
 
 # Build
-telegram -m "Pterodon - Moto G5S: Building Recovery started"
+telegram -M "Pterodon - Moto G5S: Building Recovery started"
 SYNC_START=$(date +"%s")
 
 export ALLOW_MISSING_DEPENDENCIES=true
