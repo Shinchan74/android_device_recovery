@@ -4,7 +4,7 @@ telegram -M "Pterodon - Moto G5: Sync Device (Dependencies) Tree started"
 SYNC_START=$(date +"%s")
 
 . build/envsetup.sh
-lunch omni_montana-eng
+lunch omni_cedric-eng
 
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
