@@ -3,7 +3,7 @@ name: Recovery Building
 on: [push]
 
 env:
-  DEVICE: montana-PBRP
+  DEVICE: jackpotlte-PBRP
   
 jobs:
   build:

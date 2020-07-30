@@ -1,6 +1,6 @@
 #!/bin/bash
 # Sync
-telegram -M "PBRP - Moto G5S: Sync started"
+telegram -M "PBRP - Samsung A8: Sync started"
 SYNC_START=$(date +"%s")
 
 sudo -E apt-get -qq update
@@ -9,10 +9,10 @@ sudo apt-get install default-jdk android-tools-adb bison build-essential curl fl
 sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
 sudo chmod a+rx /usr/local/bin/repo
 
-repo init -u git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-8.1
+repo init --depth=1 -u git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-9.0
 repo sync
-git clone https://github.com/yukosky/android_device_motorola_montana -b android-7.1-pbrp device/motorola/montana
+git clone https://github.com/YuMi-Project/android_device_samsung_jackpotlte -b pbrp-9.0 device/samsung/jackpotlte
 
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
-telegram -M "PBRP - Moto G5S: Sync completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
+telegram -M "PBRP - Samsung A8: Sync completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
