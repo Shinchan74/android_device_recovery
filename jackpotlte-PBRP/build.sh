@@ -24,4 +24,4 @@ SYNC_DIFF=$((SYNC_END - SYNC_START))
 telegram -M "Samsung A8: Building completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
 
 # Output
-telegram -f out/target/product/montana/PBRP-jackpotlte-*-*-*-UNOFFICIAL.zip "[PBRP Recovery] [Unofficial] - Samsung A8:"
+telegram -f out/target/product/jackpotlte/PBRP-jackpotlte-*-*-*-UNOFFICIAL.zip "[PBRP Recovery] [Unofficial] - Samsung A8:"
