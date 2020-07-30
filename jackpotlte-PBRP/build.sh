@@ -5,6 +5,7 @@ SYNC_START=$(date +"%s")
 
 . build/envsetup.sh
 lunch omni_jackpotlte-eng
+rm -rf .repo
 
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
