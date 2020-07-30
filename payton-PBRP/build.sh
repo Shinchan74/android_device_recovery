@@ -3,6 +3,7 @@
 telegram -M "PBRP - Moto X4: Sync Device (Dependencies) Tree started"
 SYNC_START=$(date +"%s")
 
+rm -rf hardware/qcom/bootctrl/
 . build/envsetup.sh
 lunch omni_payton-eng
 rm -rf .repo
