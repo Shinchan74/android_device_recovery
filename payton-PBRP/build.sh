@@ -25,4 +25,4 @@ SYNC_DIFF=$((SYNC_END - SYNC_START))
 telegram -M "PBRP - Moto X4: Building completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
 
 # Output
-telegram -f out/target/product/payton/PBRP-payton-*-*-*-UNOFFICIAL.zip "[PBRP Recovery] [Unofficial] - Moto X4"
+telegram -f out/target/product/payton/recovery.img "[PBRP Recovery] [Unofficial] - Moto X4"
