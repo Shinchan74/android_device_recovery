@@ -9,7 +9,7 @@ sudo apt-get install default-jdk android-tools-adb bison build-essential curl fl
 sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
 sudo chmod a+rx /usr/local/bin/repo
 
-repo init --depth=1 -u git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-6.0
+repo init -u git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-8.1
 repo sync
 git clone https://github.com/yukosky/android_device_motorola_montana -b android-7.1-pbrp device/motorola/montana
 
