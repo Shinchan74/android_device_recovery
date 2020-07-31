@@ -5,6 +5,7 @@ SYNC_START=$(date +"%s")
 
 . build/envsetup.sh
 lunch omni_montana-eng
+rm -rf .repo
 rm -rf device/qcom/common/*
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))

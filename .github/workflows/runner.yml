@@ -3,7 +3,7 @@ name: Recovery Building
 on: [push]
 
 env:
-  DEVICE: payton-PBRP
+  DEVICE: montana-Pterodon
   
 jobs:
   build:
