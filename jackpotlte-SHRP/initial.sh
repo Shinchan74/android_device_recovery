@@ -11,7 +11,7 @@ sudo chmod a+rx /usr/local/bin/repo
 
 repo init --depth=1 -u git://github.com/SKYHAWK-Recovery-Project/platform_manifest_twrp_omni.git -b android-9.0
 repo sync
-git clone https://github.com/YuMi-Project/android_device_samsung_jackpotlte -b pbrp-9.0 device/samsung/jackpotlte
+git clone https://github.com/YuMi-Project/android_device_samsung_jackpotlte -b shrp device/samsung/jackpotlte
 
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
