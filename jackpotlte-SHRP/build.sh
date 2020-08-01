@@ -3,6 +3,9 @@
 telegram -M "SHRP - Samsung A8: Sync Device (Dependencies) Tree started"
 SYNC_START=$(date +"%s")
 
+export ALLOWMISSINGDEPENDENCIES=true
+export LC_ALL=C
+
 . build/envsetup.sh
 lunch omni_jackpotlte-eng
 rm -rf .repo
