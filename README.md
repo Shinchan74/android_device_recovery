@@ -6,8 +6,6 @@ Device   | Supported
 -------:|:-------------------------
 Motorola Moto G5S (montana)     | Yes
 Motorola Moto G5 (cedric)     | Yes
-Motorola Moto X4 (payton)     | Yes
-Motorola Moto Z (griffin)    | Yes
 Samsung Galaxy A20s (rel/a207m)     | No (Dropped)
 Samsung Galaxy A20 (?)    | Yes (Waiting for DT)
 Samsung Galaxy A8 (jackpotlte)    | Yes

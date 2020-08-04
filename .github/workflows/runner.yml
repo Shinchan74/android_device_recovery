@@ -3,7 +3,7 @@ name: Recovery Building
 on: [push]
 
 env:
-  DEVICE: jackpotlte-SHRP
+  DEVICE: jackpot2lte-Pterodon
   
 jobs:
   build:
