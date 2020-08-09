@@ -3,7 +3,7 @@
 export my_dir=$(pwd)
 
 # Build
-telegram -m "OrangeFox R11.0 - Moto G (5S) Plus (sanders): Building Recovery started"
+telegram -M "OrangeFox R11.0 - Moto G (5S) Plus (sanders): Building Recovery started"
 SYNC_START=$(date +"%s")
 
 . build_ofox.sh
