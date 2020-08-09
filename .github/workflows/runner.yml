@@ -3,7 +3,7 @@ name: Recovery Building
 on: [push]
 
 env:
-  DEVICE: jackpot2lte-Pterodon
+  DEVICE: sanders-fox-9.0-11
   
 jobs:
   build:

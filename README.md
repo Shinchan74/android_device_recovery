@@ -1,12 +1,12 @@
 # Simple form to build recovery for devices #
 
-### List of Devices ###
+### List of Devices (8/10) ###
 
 Device   | Supported
 -------:|:-------------------------
+Motorola Moto G (5S) Plus (sanders)     | Yes (Testing)
 Motorola Moto G5S (montana)     | Yes
 Motorola Moto G5 (cedric)     | Yes
-Samsung Galaxy A20s (rel/a207m)     | No (Dropped)
 Samsung Galaxy A20 (?)    | Yes (Waiting for DT)
 Samsung Galaxy A8 (jackpotlte)    | Yes
 Samsung Galaxy A8+ (jackpot2lte)     | Yes
