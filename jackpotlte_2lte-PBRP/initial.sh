@@ -1,6 +1,6 @@
 #!/bin/bash
 # Sync
-telegram -M "PBRP - Samsung A8+: Sync started"
+telegram -M "PBRP - Samsung A8/A8+: Sync started"
 SYNC_START=$(date +"%s")
 
 sudo -E apt-get -qq update
@@ -12,7 +12,8 @@ sudo chmod a+rx /usr/local/bin/repo
 repo init --depth=1 -u git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-9.0
 repo sync
 git clone https://github.com/YuMi-Project/android_device_samsung_jackpot2lte -b pbrp-9.0 device/samsung/jackpot2lte
+git clone https://github.com/YuMi-Project/android_device_samsung_jackpotlte -b pbrp-9.0 device/samsung/jackpotlte
 
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
-telegram -M "PBRP - Samsung A8+: Sync completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
+telegram -M "PBRP - Samsung A8/A8+: Sync completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
