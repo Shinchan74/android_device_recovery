@@ -12,7 +12,7 @@ SYNC_DIFF=$((SYNC_END - SYNC_START))
 telegram -M "PBRP - Samsung A8/A8+: Device Tree Sync (Dependencies) completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
 
 # Save space
-rm -rf .repo .git
+#rm -rf .repo .git
 
 # Build 1/3 - Initial step
 telegram -M "PBRP - Samsung A8/A8+: Building Recovery started"
