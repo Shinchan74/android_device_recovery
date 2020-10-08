@@ -1,9 +1,6 @@
 name: Recovery Building
 
 on: [push]
-
-env:
-  DEVICE: jackpotlte_2lte-PBRP
   
 jobs:
   build:
@@ -13,19 +10,48 @@ jobs:
        - name: Checkout
          uses: actions/checkout@master
 
+       - name: Reclaiming disk space on / by disabling swap partition
+          run: |
+               sudo swapoff -av
+               sudo rm -f /swapfile
+
+       - name: Reclaiming disk space on / by removing .NET framework
+          run: |
+               sudo rm -rf /usr/share/dotnet
+
+       - name: Creating secondary disk folder on /dev/disk/azure/resource-part1 (SSD)
+         run: |
+              sudo mkdir -p /extended_data
+              sudo chown -R runner:docker /extended_data
+
+       - name: On SSD - Creating symlink on /dev/disk/azure/root-part1 pointing to /dev/disk/azure/resource-part1
+          run: |
+               sudo ln -s /extended_data /mnt/secondary_disk
+               sudo ln -s /mnt/secondary_disk $GITHUB_WORKSPACE/
+
+       - name: Creating cache folder on /dev/disk/azure/resource-part1 (SSD)
+          run: |
+               sudo mkdir -p /mnt/cache
+               sudo chown -R runner:docker /mnt/cache
+
+       - name: Creating symlink in $HOME/cache pointing to cache on /dev/disk/azure/resource-part1
+          run: |
+               ln -s /mnt/cache $HOME/
+
        - name: Initializing telegram bot
          env:
               TOKEN: ${{ secrets.TOKEN }}
 
          run: |
               sudo install telegram /usr/bin
-              chmod +x $DEVICE/initial.sh
-              . $DEVICE/initial.sh
+              git clone --depth 1 https://github.com/yukosky/RecoverBuild .
+              cd a21s/TWRP; chmod +x *.sh; cd ../..
               
        - name: Execute Shell Script
          env:
               TOKEN: ${{ secrets.TOKEN }}
 
          run: |
-               chmod +x $DEVICE/build.sh
-               . $DEVICE/build.sh
+               cd a21s/TWRP/
+               ./initial.sh
+               ./build.sh
