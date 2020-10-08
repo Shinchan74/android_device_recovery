@@ -44,14 +44,13 @@ jobs:
 
          run: |
               sudo install telegram /usr/bin
-              git clone --depth 1 https://github.com/yukosky/RecoverBuild .
-              cd a21s/TWRP; chmod +x *.sh; cd ../..
+              git clone --depth 1 https://github.com/yukosky/RecoverBuild RBuild
+              cd RBuild/a21s/TWRP; chmod +x *.sh; cd ../..
               
        - name: Execute Shell Script
          env:
               TOKEN: ${{ secrets.TOKEN }}
 
          run: |
-               cd a21s/TWRP/
-               ./initial.sh
-               ./build.sh
+               cd RBuild/a21s/TWRP/
+               ./auto.sh
