@@ -13,7 +13,7 @@ jobs:
        - name: Reclaiming disk space on / by disabling swap partition
          run: |
                sudo swapoff -av
-               sudo rm -f /swapfile
+               sudo rm -f /swapfile;
 
        - name: Reclaiming disk space on / by removing .NET framework
          run: |
