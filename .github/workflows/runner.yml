@@ -54,12 +54,12 @@ jobs:
          run: |
               sudo install telegram /usr/bin
               git clone --depth 1 https://github.com/yukosky/RecoverBuild RBuild
-              cd RBuild/a30/Fox-9.0; chmod +x *.sh; cd ../..
+              cd RBuild/a20/PBRP-9.0; chmod +x *.sh; cd ../..
               
        - name: Execute Shell Script
          env:
               TOKEN: ${{ secrets.TOKEN }}
 
          run: |
-               cd RBuild/a30/Fox-9.0
+               cd RBuild/a20/PBRP-9.0
                ./auto.sh
