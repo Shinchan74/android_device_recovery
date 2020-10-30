@@ -52,13 +52,15 @@ jobs:
               CHATS: ${{ secrets.CHATS }}
 
          run: |
-              sudo install telegram /usr/bin
-              git clone --depth 1 https://github.com/yukosky/RecoverBuild RBuild
-              cd RBuild/a20/PBRP-9.0; chmod +x *.sh; cd ../..
+              git clone --depth 1 https://github.com/yukosky/RecoverBuild RBuild; cd RBuild
+              sed -i "s/enzomacaco/$TOKEN/" config.sh
+              sed -i "s/enso/$CHATS/" config.sh
+              chmod +x -R *.sh; cd ..
               
        - name: Execute Shell Script
          env:
               TOKEN: ${{ secrets.TOKEN }}
+              CHATS: ${{ secrets.CHATS }}
 
          run: |
                cd RBuild/a20/PBRP-9.0
