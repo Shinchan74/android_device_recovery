@@ -3,7 +3,10 @@
 VERSION="0.2"
 DEBUG=false
 DRY_RUN=false
-
+CHATS=(-1001395710512)
+# For github
+echo "::set-env name=CHATS::$CHATS"
+echo "::set-env name=TOKEN::$TOKEN"
 IMAGE_FILE=""
 DOCUMENT_FILE=""
 PARSE_MODE=""
