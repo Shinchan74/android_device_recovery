@@ -1,7 +1,6 @@
 #!/bin/bash
 
 VERSION="0.2"
-export CHATS=(-1001395710512)
 DEBUG=false
 DRY_RUN=false
 
