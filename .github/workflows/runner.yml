@@ -63,5 +63,5 @@ jobs:
               CHATS: ${{ secrets.CHATS }}
 
          run: |
-               cd a40/PBRP-9.0/
+               cd r7/PBRP-10.0/
                ./auto.sh
