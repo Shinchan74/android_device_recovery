@@ -25,7 +25,7 @@ mka recoveryimage -j8
 
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
-if [ -f "$THIS_DIR/PBRP/out/target/product/a30/recovery.img" ]; then
+if [ -f "$THIS_DIR/PBRP/out/target/product/a40/recovery.img" ]; then
    # Output for: Build successfully fine
 ~/tmp/telegram -M "⚒ ***Recovery***: [Pitch Black Recovery Project](https://pitchblackrecovery.com/) (3.0.0)
 📱 ***Device***: Samsung Galaxy A40
