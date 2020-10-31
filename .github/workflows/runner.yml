@@ -49,7 +49,7 @@ jobs:
        - name: Initializing telegram bot
          env:
               TOKEN: ${{ secrets.TOKEN }}
-              CHATS: ${{ secrets.CHATS }} 
+              CHATS: ${{ secrets.CHATS }}
 
          run: |
               sed -i "s/enzomacaco/$TOKEN/" config.sh
@@ -63,5 +63,10 @@ jobs:
               CHATS: ${{ secrets.CHATS }}
 
          run: |
-               cd r7/TWRP-10
+               cd a30/PBRP-9.0/
                ./auto.sh
+               rm -rf PBRP/out/
+               cd ../../a40/PBRP-9.0
+               mv ../../a30/PBRP-9.0 .
+               git clone --depth 1 https://github.com/YuMi-Project/android_device_samsung_a40 -b pbrp-9.0 PBRP/device/samsung/a40
+               ./build.sh
