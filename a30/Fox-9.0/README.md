@@ -4,8 +4,8 @@
 
 ```bash
 # download script
-$ wget https://raw.githubusercontent.com/yukosky/RecoverBuild/master/a30/Fox-9.0/build.sh
-$ wget https://raw.githubusercontent.com/yukosky/RecoverBuild/master/a30/Fox-9.0/initial.sh
+$ wget https://raw.githubusercontent.com/Project-WKF/android_device_recovery/master/a30/Fox-9.0/build.sh
+$ wget https://raw.githubusercontent.com/Project-WKF/android_device_recovery/master/a30/Fox-9.0/initial.sh
 
 # Change the script permission
 $ chmod +x ./build.sh

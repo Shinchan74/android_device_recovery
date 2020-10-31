@@ -4,8 +4,8 @@
 
 ```bash
 # download script
-$ wget https://raw.githubusercontent.com/yukosky/RecoveryBuild/master/a20/PBRP-9.0/initial.sh
-$ wget https://raw.githubusercontent.com/yukosky/RecoveryBuild/master/a20/PBRP-9.0/build.sh
+$ wget https://raw.githubusercontent.com/Project-WKF/android_device_recovery/master/a20/PBRP-9.0/initial.sh
+$ wget https://raw.githubusercontent.com/Project-WKF/android_device_recovery/master/a20/PBRP-9.0/build.sh
 
 # Change the script permission
 $ chmod +x ./initial.sh
