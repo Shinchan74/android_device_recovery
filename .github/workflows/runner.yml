@@ -63,10 +63,5 @@ jobs:
               CHATS: ${{ secrets.CHATS }}
 
          run: |
-               cd a30/PBRP-9.0/
+               cd a40/PBRP-9.0/
                ./auto.sh
-               rm -rf PBRP/out/
-               cd ../../a40/PBRP-9.0
-               mv ../../a30/PBRP-9.0 .
-               git clone --depth 1 https://github.com/YuMi-Project/android_device_samsung_a40 -b pbrp-9.0 PBRP/device/samsung/a40
-               ./build.sh
