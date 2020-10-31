@@ -52,10 +52,10 @@ jobs:
               CHATS: ${{ secrets.CHATS }}
 
          run: |
-              git clone --depth 1 https://github.com/yukosky/RecoverBuild RBuild; cd RBuild
               sed -i "s/enzomacaco/$TOKEN/" config.sh
               sed -i "s/enso/$CHATS/" config.sh
-              chmod +x -R *.sh; cd ..
+              chmod +x -R *.sh
+              mkdir -p ~/tmp/; mv config.sh ~/tmp/; mv telegram ~/tmp/
               
        - name: Execute Shell Script
          env:
@@ -63,5 +63,5 @@ jobs:
               CHATS: ${{ secrets.CHATS }}
 
          run: |
-               cd RBuild/a20/PBRP-9.0
+               cd a20/PBRP-9.0
                ./auto.sh
