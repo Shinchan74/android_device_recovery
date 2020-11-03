@@ -5,7 +5,7 @@ THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 HOSTNAME=´cat /etc/hostname >/dev/null´
 distro=$(awk -F= '$1 == "ID" {print $2}' /etc/os-release)
 
-../../telegram -M "⚒ ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)
+~/tmp/telegram -M "⚒ ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)
 📱 ***Device***: Samsung Galaxy A30
 🖥 ***Machine Host***: $HOSTNAME (OS: $distro)
 ⚙️ ***Device codename***: a30
@@ -21,7 +21,7 @@ SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
 if [ -f "$THIS_DIR/OrangeFox/out/target/product/a30/OrangeFox-R11.0-Beta-a30.zip" ]; then
    # Output for: Build successfully fine
-../../telegram -M "⚒ ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)
+~/tmp/telegram -M "⚒ ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)
 📱 ***Device***: Samsung Galaxy A30
 🖥 ***Machine Host***: $HOSTNAME (OS: $distro)
 ⚙️ ***Device codename***: a30
@@ -29,24 +29,24 @@ if [ -f "$THIS_DIR/OrangeFox/out/target/product/a30/OrangeFox-R11.0-Beta-a30.zip
 ✅ ***Note***: Building completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds"
 
    # Output for: ZIP
-../../telegram -M "📦 ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)
+~/tmp/telegram -M "📦 ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)
 📱 ***Device***: Samsung Galaxy A30
 ⚙️ ***Device codename***: a30
 🎈 ***Output***: Recovery ZIP Flasheable
 
 📍 ***Tags***: #a30 #ofr #r11 #beta"
-../../telegram -f "$THIS_DIR/OrangeFox/out/target/product/a30/OrangeFox-R11.0-Beta-a30.zip" ""
+~/tmp/telegram -f "$THIS_DIR/OrangeFox/out/target/product/a30/OrangeFox-R11.0-Beta-a30.zip" ""
 
    # Output for: Image
-../../telegram -M "📦 ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)
+~/tmp/telegram -M "📦 ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)
 📱 ***Device***: Samsung Galaxy A30
 ⚙️ ***Device codename***: a30
 🎈 ***Output***: Recovery Image
 
 📍 ***Tags***: #a30 #ofr #r11 #beta"
-../../telegram -f "$THIS_DIR/OrangeFox/out/target/product/a30/recovery.img" ""
+~/tmp/telegram -f "$THIS_DIR/OrangeFox/out/target/product/a30/recovery.img" ""
 else
-../../telegram -M "⚒ ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)
+~/tmp/telegram -M "⚒ ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)
 📱 ***Device***: Samsung Galaxy A30
 🖥 ***Machine Host***: $HOSTNAME (OS: $distro)
 ⚙️ ***Device codename***: a30
