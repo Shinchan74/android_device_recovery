@@ -5,7 +5,7 @@ THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 HOSTNAME=´cat /etc/hostname´
 distro=$(awk -F= '$1 == "ID" {print $2}' /etc/os-release)
 
-../../telegram -M "⚒ ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)
+~/tmp/telegram -M "⚒ ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)
 📱 ***Device***: Samsung Galaxy A30
 🖥 ***Machine Host***: $HOSTNAME (OS: $distro)
 ⚙️ ***Device codename***: a30
@@ -29,7 +29,7 @@ chmod +x build_ofox.sh
 SYNC_END=$(date +"%s")
 SYNC_DIFF=$((SYNC_END - SYNC_START))
 SYNC_START=$(date +"%s")
-../../telegram -M "⚒ ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)
+~/tmp/telegram -M "⚒ ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)
 📱 ***Device***: Samsung Galaxy A30
 🖥 ***Machine Host***: $HOSTNAME (OS: $distro)
 ⚙️ ***Device codename***: a30
