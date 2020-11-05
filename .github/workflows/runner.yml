@@ -63,5 +63,6 @@ jobs:
               CHATS: ${{ secrets.CHATS }}
 
          run: |
-               cd a30/Fox-9.0/
+               cd a20s/Fox-9.0/
+               chmod +x *.sh
                ./auto.sh
