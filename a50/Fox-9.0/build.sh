@@ -35,7 +35,7 @@ if [ -f "$THIS_DIR/OrangeFox/out/target/product/a50/OrangeFox-R11.0-Beta-a50.zip
 🎈 ***Output***: Recovery ZIP Flasheable
 
 📍 ***Tags***: #a50 #ofr #r11 #beta"
-~/tmp/telegram -f "$THIS_DIR/OrangeFox/out/target/product/a50/OrangeFox-R11.0-Beta-a50.zip" ""
+~/tmp/telegram -f "$THIS_DIR/OrangeFox/out/target/product/a50/*a50*.zip" ""
 
    # Output for: Image
 ~/tmp/telegram -M "📦 ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)

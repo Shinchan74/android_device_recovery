@@ -22,7 +22,7 @@ mkdir -p "$THIS_DIR/OrangeFox/"
 cd "$THIS_DIR/OrangeFox/"
 repo init --depth=1 -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
 repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j16
-git clone --depth 1 https://github.com/yukosky/android_device_samsung_a50 -b fox-9.0 device/samsung/a50
+git clone --depth 1 https://github.com/yukosky/orangefox_device_samsung_a50 -b fox-9.0 device/samsung/a50
 mv device/samsung/a50/*.sh .
 chmod +x build_ofox.sh
 
