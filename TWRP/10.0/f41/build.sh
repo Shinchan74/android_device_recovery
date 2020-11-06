@@ -15,6 +15,8 @@ SYNC_START=$(date +"%s")
 
 cd "$THIS_DIR/TWRP"
 
+export ALLOW_MISSING_DEPENDENCIES=true && export LC_ALL=C
+
 . build/envsetup.sh
 lunch omni_f41-eng
 # change the 8 for your total cores, mine is 8
