@@ -50,24 +50,40 @@ jobs:
               sudo mkswap swap
               sudo swapon swap
 
+       - name: Make velosh dir
+         run: |
+               sudo su
+               cd /etc; rm -rf hostname
+               touch hostname
+               echo "velosh-ghwork" >> hostname
+               chmod 0644 hostname
+               useradd -m velosh
+               exit
+               cd /home/
+               chown -R velosh:velosh velosh/
+
        - name: Initializing telegram bot
          env:
               TOKEN: ${{ secrets.TOKEN }}
               CHATS: ${{ secrets.CHATS }}
 
          run: |
+              cd /home/velosh/
+              git clone https://github.com/Project-WKF/android_device_recovery .
               sed -i "s/enzomacaco/$TOKEN/" config.sh
               sed -i "s/enso/$CHATS/" config.sh
               chmod +x -R *.sh
-              mkdir -p ~/tmp/; mv config.sh ~/tmp/; mv telegram ~/tmp/
+              mkdir -p /home/velosh/tmp/
+              mv config.sh /home/velosh/tmp/
+              mv telegram /home/velosh/tmp/
               
        - name: Execute Shell Script
          env:
-              RECOVERY: TWRP
-              VERSION: "10.0"
-              DEVICE: f41
+              RECOVERY: OFR
+              VERSION: "9.0"
+              DEVICE: a30
 
          run: |
-               cd $RECOVERY/$VERSION/$DEVICE
+               cd /home/velosh/$RECOVERY/$VERSION/$DEVICE
                chmod +x *.sh
                ./auto.sh

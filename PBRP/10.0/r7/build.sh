@@ -1,5 +1,9 @@
 #!/bin/bash
+if [ ! -d "/home/velosh/" ]; then
 source ~/tmp/config.sh
+else
+source /home/velosh/config.sh
+fi
 
 THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 HOSTNAME=´cat /etc/hostname >/dev/null´
