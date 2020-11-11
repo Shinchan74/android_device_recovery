@@ -29,7 +29,7 @@ if [ -f "$THIS_DIR/OrangeFox/out/target/product/a20s/OrangeFox-R11.0-Beta-a20s.z
    # Output
 ~/tmp/telegram -M "📦 ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)
 📱 ***Device***: Samsung Galaxy A20s
-⚙️ ***Device codename***: a20s
+⚙️ ***Device codename***: shiva
 🎈 ***Output***: Recovery ZIP Flasheable
 
 📍 ***Tags***: #a20s #ofr #r11 #beta"
