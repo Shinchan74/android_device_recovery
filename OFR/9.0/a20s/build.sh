@@ -10,7 +10,7 @@ HOSTNAME=´cat /etc/hostname >/dev/null´
 distro=$(awk -F= '$1 == "ID" {print $2}' /etc/os-release)
 
 ~/tmp/telegram -M "⚒ ***Recovery***: [OrangeFox](https://gitlab.com/OrangeFox) (R11.0)
-📱 ***Device***: Samsung Galaxy A20s
+📱 ***Device***: Poco M2
 🖥 ***Machine Host***: $HOSTNAME (OS: $distro)
 ⚙️ ***Device codename***: a20s
 
